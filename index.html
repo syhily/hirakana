@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>日语五十音测试</title>
+  <link rel="stylesheet" type="text/css" href="asserts/app.min.css?v=2.0">
+</head>
+<body>
+<h1 class="tc">
+  <a href="#!home" class="sitename">日语五十音测试</a>
+</h1>
+<div class="output tc">
+少女祈祷中とは ...
+</div>
+<footer class="tc">
+  made by <a href="https://egoistian.com/" target="_blank">malachai</a>, reworked by <a href="https://yufan.me" target="_blank">syhily</a>
+</footer>
+
+<script id="choose-tmpl" type="text/template">
+  <h2>选择</h2>
+  {@each clickables as clickable, index}
+  <a class="clickable line" id="${clickable.id}" href="#!c/${clickable.id}">${clickable.name}行</a>
+  {@/each}
+  <a class="clickable line" href="#!g/easy">组合</a>
+  <h2>听写</h2>
+  <a class="clickable line" id="aline" href="#!t/all">全部</a>
+</script>
+
+<script id="ganakana-tmpl" type="text/template">
+<div class="char" id="char">${char_name}</div>
+<div class="choices clearfix">
+  {@each choices as choice, index}
+  <div class="choice" data-id="${choice.group}">${choice.item}</div>
+  {@/each}
+</div>
+<div class="result" id="result">
+${current_count}/100 &nbsp;<span class="correct">${correct}</span> : <span class="fault">${wrong}</span> &nbsp;<span class="clock">${clock}</span>
+  {@each errors as error, index}
+  <div class="wrong">${error.name} : ${error.sound}</div>
+  {@/each}
+</div>
+</script>
+
+<script id="tingxie-tmpl" type="text/template">
+<div class="char" id="char">${char_name}</div>
+<div class="tc" id="remains">${count_down}</div>
+</script>
+
+<script src="asserts/app.min.js?v=4.0"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "50yin",
+  "version": "1.0.0",
+  "description": "A haragana & katakana online test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www-working/50yin.git"
+  },
+  "keywords": [
+    "haragana",
+    "katakana"
+  ],
+  "author": "Syhily",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/www-working/50yin/issues"
+  },
+  "homepage": "https://yufan.me/50yin",
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4"
+  }
+}
